@@ -86,7 +86,7 @@ get_header(); ?>
 						$validated = 0;
 					}
 					else {					
-						$regex = "/\([0-9]{3}\)\s[0-9]{3}\-[0-9]{4}/"; //format (###) ###-####
+						$regex = "/\([1-9]{3}\)\s[1-9]{3}\-[0-9]{4}/"; //format (###) ###-####
 						if (!preg_match($regex,$mobilePhone)){
 							$mobilePhoneErr = "Invalid Phone Number";
 							$validated = 0;
