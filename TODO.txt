@@ -1,0 +1,54 @@
+---------- September 21, 2015 ----------
+[x] Make birthday be just a date choice
+[] Add QR code creation to signup sheet
+[x] Test the mobile version signup sheet
+[x] Print the keychain tags
+[x] Ask Cheyne about the tags
+[x] Make keychains
+----------------------------------------
+
+---------- September 22, 2015 ----------
+[] Add QR Code creation to signup sheet
+[] Find new scanner / add scanner to website
+[] Fix newcl Edit student dropbox AppInfo bug
+[] Fix newcl grade update confirm bug
+	-> Does not stop the php function if the cancel button is pressed
+[] Test newcl signup page
+[] Test all files in newcl that use validate_input
+	- Edit my info
+	- Edit student
+	- Signup
+	- Student List
+[] Add plugins to newcl
+[x] Create Menus to newcl
+
+Known bugs:
+	- Slideshow Gallery(?) plugin causes theme options menu to freak out
+
+---------- October 2, 2015 ----------
+[] Add QR Code creation to signup sheet
+[] Find new scanner / add scanner to website
+[] Fix newcl Edit student dropbox AppInfo bug
+[] Fix newcl grade update confirm bug
+	-> Does not stop the php function if the cancel button is pressed
+[] Test site signup page
+[] Test all files in site that use validate_input
+	- Edit my info
+	- Edit student
+	- Signup
+	- Student List
+[] Add plugins to site
+[] 
+
+
+
+Known bugs:
+	- Slideshow Gallery(?) plugin causes theme options menu to freak out
+
+----------------------------------------
+
+
+
+
+
+
