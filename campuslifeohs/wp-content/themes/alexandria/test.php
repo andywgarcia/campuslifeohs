@@ -30,6 +30,22 @@ get_header(); ?>
 				$filename = ABSPATH . 'qr/newcl.png';
 				QRcode::png("YAY!", $filename);
 				
+				
+				$black_image = imagecreatetruecolor(300, 100);
+				$black = imagecolorallocate($black_image, 0x00, 0xF0, 0x00);
+				$fontfile = ABSPATH . "my-includes/fonts/ARIALUNI.ttf";
+				if (file_exists($fontfile)){
+					echo "File does exist<br>";
+				}
+				else {
+					echo "File does not exist <br>";
+				}
+				//echo $fontfile . "<br>";
+				$text = 'Andy Garcia';
+				
+				$bounds = imagettfbbox(12,0,$fontfile,$text);
+				var_dump($bounds);
+				
 				$im = imagecreatefrompng($filename);
 				$width=imagesx($im);
 				$height=imagesy($im);
@@ -37,13 +53,15 @@ get_header(); ?>
 				$newheight = 175;
 				$output = imagecreate($newwidth, $newheight);
 				imagecopy($output, $im, (($newwidth-$width)/2), 10, 0, 0, $width, $height);
+				imagettftext($output, 12, 0, 10,10, $black, $fontfile, $text);
+				
 				imagepng($output,ABSPATH . 'qr/newerimage.png');
 				imagedestroy($output);
 				imagedestroy($im);
 				
 				
-				echo site_url() . "<br><br>";
-				echo ABSPATH . "<br><br>";
+				echo "Site url: " . site_url() . "<br>";
+				echo "ABSPATH: " . ABSPATH . "<br>";
 				
 				?>
 				<img src="<?php echo ABSPATH . '/qr/newcl.png' . "<br>"; ?>" />
