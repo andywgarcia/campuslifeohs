@@ -31,31 +31,41 @@ get_header(); ?>
 				QRcode::png("YAY!", $filename);
 				
 				
-				$black_image = imagecreatetruecolor(300, 100);
-				$black = imagecolorallocate($black_image, 0x00, 0xF0, 0x00);
+				
+				$im = imagecreatefrompng($filename);
+				//$black = imagecolorallocate($im, 0x00, 0x00, 0x00);
 				$fontfile = ABSPATH . "my-includes/fonts/ARIALUNI.ttf";
-				if (file_exists($fontfile)){
-					echo "File does exist<br>";
-				}
-				else {
-					echo "File does not exist <br>";
-				}
-				//echo $fontfile . "<br>";
 				$text = 'Andy Garcia';
 				
 				$bounds = imagettfbbox(12,0,$fontfile,$text);
 				var_dump($bounds);
 				
-				$im = imagecreatefrompng($filename);
+				
 				$width=imagesx($im);
 				$height=imagesy($im);
 				$newwidth = 125;
 				$newheight = 175;
-				$output = imagecreate($newwidth, $newheight);
+				$bordersize = 1;
+				$wwidth = $newwidth - 2*$bordersize;
+				$wheight = $newheight - 2*$bordersize;
+				$white_space = imagecreatetruecolor($wwidth,$wheight);
+				$output = imagecreatetruecolor($newwidth, $newheight);
+				$white = imagecolorallocate($output, 255, 255, 255);
+				$black = imagecolorallocate($output, 0,0,0);
+				if (!imagefill($output,0,0,$black)) {
+					echo "Image fill failed <br>";
+				}
+				if (!imagefill($white_space,0,0,$white)) {
+					echo "Image fill failed <br>";
+				}
+				imagecopy($output,$white_space,$bordersize,$bordersize,0,0,$wwidth,$wheight);
+				imagettftext($output, 12, 0, 20,130, $black, $fontfile, $text);
 				imagecopy($output, $im, (($newwidth-$width)/2), 10, 0, 0, $width, $height);
-				imagettftext($output, 12, 0, 10,10, $black, $fontfile, $text);
 				
+				//imagettftext($im, 12, 0, 20,20, $black, $fontfile, $text);
+				//imagestring($im,3,20,130,$text,$black);
 				imagepng($output,ABSPATH . 'qr/newerimage.png');
+				imagepng($im, ABSPATH. 'qr/newcl.png');
 				imagedestroy($output);
 				imagedestroy($im);
 				
