@@ -13,7 +13,7 @@ function validate_input($conn,$data) {
 //check if only letters and lenght
 function checkLetters($text)
 {
-	if (lenght($text) <= 1){
+	if (strlen($text) <= 1){
 		return 'Name to short';
 	}
 	if (!preg_match("/^[a-zA-Z ]*$/",$text)){
@@ -24,7 +24,7 @@ function checkLetters($text)
 
 
 function checkNumber($number){
-	if (lenght($text) <= 13){
+	if (strlen($number) <= 13){
 		return 'Check your phone number';
 	}
 						

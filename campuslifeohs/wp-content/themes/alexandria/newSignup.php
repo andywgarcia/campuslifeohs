@@ -108,7 +108,7 @@ get_header(); ?>
 					}
 					
 					
-					
+					/*
 					//Dropbox Stuff
 					$accessToken = "mcWxFEgcVbIAAAAAAAACgctpLBLkmojYc8kXY4IJDgQvtBdKiPXaUBT5bRDoj9Mu";
 					$appInfo = dbx\AppInfo::loadFromJsonFile($includes . "dropbox-sdk/Dropbox/app-info.json");
@@ -160,7 +160,7 @@ get_header(); ?>
 							$error = 0;
 						}
 					}
-					
+					*/
 					
 					//	All photo upload code here
 					if (is_uploaded_file($_FILES['uploadedFile']['tmp_name'])){
@@ -439,7 +439,7 @@ get_header(); ?>
 				</style>
 				<div id="respond">
 					<?php echo $response; ?>
-					<form method="post" action="<?php echo get_permalink(); ?>" enctype="multipart/form-data">
+					<form method="post" action="<?php echo get_site_url(); ?>" enctype="multipart/form-data">
 						
 						<table>
 							<tr><td id="details"><p id="required"><b>*</b> Required</p><tr>				

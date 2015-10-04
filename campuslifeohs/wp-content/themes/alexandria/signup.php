@@ -107,7 +107,7 @@ get_header(); ?>
 						$validated = 0;
 					}
 					
-					
+					/*
 					
 					//Dropbox Stuff
 					$accessToken = "mcWxFEgcVbIAAAAAAAACgctpLBLkmojYc8kXY4IJDgQvtBdKiPXaUBT5bRDoj9Mu";
@@ -160,7 +160,7 @@ get_header(); ?>
 							$error = 0;
 						}
 					}
-					
+					*/
 					
 					//	All photo upload code here
 					if (is_uploaded_file($_FILES['uploadedFile']['tmp_name'])){
@@ -278,6 +278,7 @@ get_header(); ?>
 					
 					mysqli_close($conn);
 					
+					/*
 					//Update the dropbox
 					if ($pass == 1){
 						if ($csvFlag == 1){
@@ -357,7 +358,7 @@ get_header(); ?>
 							}
 						} // end if
 					}
-					
+					*/
 					if ($pass == 1 && $error == 0) {
 						$message = "$firstName $lastName has registered with errors\n";
 						$message .= "Email: $primaryEmail\n";
