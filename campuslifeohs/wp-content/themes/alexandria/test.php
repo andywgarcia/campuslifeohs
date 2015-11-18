@@ -27,6 +27,52 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php 
+				function createQrPng($firstName,$lastName,$id){
+					$filename = ABSPATH . 'qr/' . $id . '-' . $firstName . '-' . $lastName . '.png';
+					QRcode::png($id, $filename);
+					
+					//create the blank image
+					$im = imagecreatefrompng($filename);
+
+					//setting up putting text on the image
+					$fontfile = ABSPATH . "my-includes/fonts/ARIALUNI.ttf";
+					$text = $firstName . " " . $lastName;
+					$font_size = 12;
+					$bounds = imagettfbbox($font_size,0,$fontfile,$text);
+					
+					//can't remember what this does. I think it sets up the canvas with the size
+					$width=imagesx($im);
+					$height=imagesy($im);
+					$newwidth = 400;
+					$newheight = 600;
+					$bordersize = 1;
+					$wwidth = $newwidth - 2*$bordersize;
+					$wheight = $newheight - 2*$bordersize;
+					$white_space = imagecreatetruecolor($wwidth,$wheight);
+					$output = imagecreatetruecolor($newwidth, $newheight);
+					$white = imagecolorallocate($output, 255, 255, 255);
+					$black = imagecolorallocate($output, 0,0,0);
+					if (!imagefill($output,0,0,$black)) {
+						echo "Image fill failed <br>";
+					}
+					if (!imagefill($white_space,0,0,$white)) {
+						echo "Image fill failed <br>";
+					}
+
+					//overlay png image of qr code and text
+					imagecopy($output,$white_space,$bordersize,$bordersize,0,0,$wwidth,$wheight);
+					imagettftext($output, 12, 0, 20,130, $black, $fontfile, $text);
+					imagecopy($output, $im, (($newwidth-$width)/2), 10, 0, 0, $width, $height);
+
+					//create the final image
+					imagepng($output,ABSPATH . 'qr/newerimage.png');
+					imagepng($im, ABSPATH. 'qr/newcl.png');
+
+					//clean up
+					imagedestroy($output);
+					imagedestroy($im);
+				}
+
 				$filename = ABSPATH . 'qr/newcl.png';
 				QRcode::png("YAY!", $filename);
 				
