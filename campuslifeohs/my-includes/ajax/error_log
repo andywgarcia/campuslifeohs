@@ -1,0 +1,12 @@
+[18-Nov-2015 01:43:32 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SELECT 'email' FROM student_list WHERE email = ''
+[18-Nov-2015 01:43:32 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SHOW FULL COLUMNS FROM `student_list`
+[18-Nov-2015 01:45:58 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SELECT 'email' FROM student_list WHERE email = ''
+[18-Nov-2015 01:45:58 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SHOW FULL COLUMNS FROM `student_list`
+[18-Nov-2015 01:46:06 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SELECT 'email' FROM student_list WHERE email = ''
+[18-Nov-2015 01:46:06 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SHOW FULL COLUMNS FROM `student_list`
+[18-Nov-2015 01:47:09 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SELECT 'email' FROM student_list WHERE email = ''
+[18-Nov-2015 01:47:09 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SHOW FULL COLUMNS FROM `student_list`
+[18-Nov-2015 02:22:34 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SELECT 'email' FROM student_list WHERE email = ''
+[18-Nov-2015 02:22:34 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SHOW FULL COLUMNS FROM `student_list`
+[18-Nov-2015 02:22:41 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SELECT 'email' FROM student_list WHERE email = ''
+[18-Nov-2015 02:22:41 America/Los_Angeles] WordPress database error Table 'campusli_prod.student_list' doesn't exist for query SHOW FULL COLUMNS FROM `student_list`

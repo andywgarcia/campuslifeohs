@@ -14,10 +14,7 @@ Template Name: TEST
  *
  * @package alexandria
  */
-
-
 require ABSPATH . 'my-includes/phpqrcode/qrlib.php';
-
 get_header(); ?>
 
 	<div id="primary" class="full-page-content-area">
@@ -27,7 +24,6 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 				<?php 
-
 				function createQrPng($firstName,$lastName,$id){
 					$filename = ABSPATH . 'qr/' . $id . '-' . $firstName . '-' . $lastName . '.png';
 					$size = 8;
@@ -36,7 +32,6 @@ get_header(); ?>
 					
 					//create the blank image
 					$im = imagecreatefrompng($filename);
-
 					//setting up putting text on the image
 					$fontfile = ABSPATH . "my-includes/fonts/ARIALUNI.ttf";
 					$text = $firstName . " " . $lastName;
@@ -61,23 +56,17 @@ get_header(); ?>
 					if (!imagefill($white_space,0,0,$white)) {
 						echo "Image fill failed <br>";
 					}
-
 					$size = 15;
 					$angle = 0;
 					$x = 10;
 					$y = 10;
 						// Create the textbox
 						//$textbox = imagecreatetruecolor($newwidth-50, 30);
-
 						//imagefill($textbox, 0, 0, $black);
 						//imagefill($textbox, 0, 0, $white);
-
 						// Add the text
 						//$tb = imagettftext($textbox, $size, $angle, 0, 0, $black, $fontfile, $text);
-
-
 						
-
 					//array imagettftext ( resource $image , float $size , float $angle , int $x , int $y , int $color , string $fontfile , string $text )
 					//imagecopy ( resource $dst_im , resource $src_im , int $dst_x , int $dst_y , int $src_x , int $src_y , int $src_w , int $src_h )
 					//Put border
@@ -85,30 +74,18 @@ get_header(); ?>
 					
 					//overlay png image of qr code
 					//imagecopy($output, $im, (($newwidth-$width)/2), 10, 0, 0, $width, $height);
-
 					//overlay text
 					//$x = ceil(($newwidth - $tb[2]) / 2); // lower left X coordinate for text
 					//$y = ceil($newheight*3/4);
 					//imagecopy($output,$textbox,$x,$y,0,0,$width,$height);
 					//imagettftext($output, $size, $angle, $x, $y, $black, $fontfile, $text);
-
 					$bbox = imagettfbbox($size, 0, $fontfile, $text);
-
 					//$x = $bbox[0] + (imagesx($output) / 2) - ($bbox[4] / 2) + 10;
 					//$y = $bbox[1] + (imagesy($output) / 2) - ($bbox[5] / 2) - 5;
-
 					//imagettftext($output, $size, 0, $x, $y, $black, $fontfile, $testext);
 					imagestring($output,1,$x,$y,$text,$black);
-
-
-
-
-
-
-
 					//create the final image
 					imagepng($output,$filename);
-
 					//clean up
 					imagedestroy($output);
 					imagedestroy($im);
@@ -165,7 +142,6 @@ get_header(); ?>
 				$id = 999;
 				$filename = 'qr/' . $id . '-' . $firstName . '-' . $lastName . '.png';
 				createQrPng($firstName,$lastName,$id);
-
 				?>
 				
 				<img src="<?php echo site_url() . '/' . $filename; ?>" />

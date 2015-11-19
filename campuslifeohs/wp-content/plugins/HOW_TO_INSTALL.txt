@@ -1,0 +1,5 @@
+1. Copy xcrud_plugin.php and xcrud folder in your plugins folder.
+2. Install plugin.
+3. Configure xcrud/xcrud_config.php
+4. Use! You can use <xcrud></xcrud> or [xcrud][/xcrud] tags in your posts. Plugin automaically loads xcrud files.
+   Plugin automatically sets scripts_url for xcrud. Plugin deactivates WP autoformating for content.

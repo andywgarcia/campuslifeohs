@@ -1,63 +1,63 @@
 @charset "UTF-8";
-/*------------------------------------------------------------------------------
-
-This is the BuddyPress companion stylesheet for
-the WordPress Twentyfifteen theme.
-
-This sheet supports the primary BuddyPress styles in buddypress.css
-
-If you are running as a child theme of twentyfifteen this stylesheet will be
-loaded by default. If you want to modify the styles the normal BP Theme Compat
-hierarchy works and you can copy the file to buddypress/css/ or community/css/
-in your child themes root & either start over or modify the rulesets.
-
-If you do not require the styles you can dequeue them from the themes functions file.
-
-Please see this codex article for more information:
-http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
-
---------------------------------------------------------------------------------
->>> TABLE OF CONTENTS:
---------------------------------------------------------------------------------
-1.0 Theme Structural Elements & overrides
-2.0 - Navigation - General
-	2.1 - Navs - Object Nav / Sub Nav (item-list-tabs)
-	2.2 - Pagination
-3.0 - Images
-4.0 - BP Lists / Loops Generic
-	4.1 - Activity Loop
-		4.1.1 Whats New Activity
-		4.1.2 - Activity Listing
-		4.1.3 - Activity Comments
-	4.2 - Members Loop
-	4.3 - Groups Loop
-	4.4 - Blogs Loop
-5.0 - Directories - Members, Groups, Blogs, Forums
-6.0 - Single Item screens: User Account & Single Group Screens
-	6.1 - Item Headers: Global
-		6.1.1 - item-header: Groups
-		6.1.2 - item-header: User Accounts
-	6.2 - Item Body: Global
-		6.2.1 - item-body: Groups
-			6.2.1.1 - Management settings screens
-			6.2.1.2 - Group members list
-			6.2.1.3 - Group Send Invites
-		6.2.2 - item-body: User Accounts
-			6.2.2.1 - classes, pag, filters
-			6.2.2.2 - Extended Profiles
-			6.2.2.3 - Groups
-			6.2.2.4 - friends
-			6.2.2.5 - Private Messaging Threads
-			6.2.2.6 - Settings
-7.0 - Forms  -  General
-8.0 - Tables -  General
-9.0 - Error / Success Messages
-10.0 - Ajax Loading, Widgets, General classes
+/*------------------------------------------------------------------------------
+
+This is the BuddyPress companion stylesheet for
+the WordPress Twentyfifteen theme.
+
+This sheet supports the primary BuddyPress styles in buddypress.css
+
+If you are running as a child theme of twentyfifteen this stylesheet will be
+loaded by default. If you want to modify the styles the normal BP Theme Compat
+hierarchy works and you can copy the file to buddypress/css/ or community/css/
+in your child themes root & either start over or modify the rulesets.
+
+If you do not require the styles you can dequeue them from the themes functions file.
+
+Please see this codex article for more information:
+http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
+
+--------------------------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------------------------
+1.0 Theme Structural Elements & overrides
+2.0 - Navigation - General
+	2.1 - Navs - Object Nav / Sub Nav (item-list-tabs)
+	2.2 - Pagination
+3.0 - Images
+4.0 - BP Lists / Loops Generic
+	4.1 - Activity Loop
+		4.1.1 Whats New Activity
+		4.1.2 - Activity Listing
+		4.1.3 - Activity Comments
+	4.2 - Members Loop
+	4.3 - Groups Loop
+	4.4 - Blogs Loop
+5.0 - Directories - Members, Groups, Blogs, Forums
+6.0 - Single Item screens: User Account & Single Group Screens
+	6.1 - Item Headers: Global
+		6.1.1 - item-header: Groups
+		6.1.2 - item-header: User Accounts
+	6.2 - Item Body: Global
+		6.2.1 - item-body: Groups
+			6.2.1.1 - Management settings screens
+			6.2.1.2 - Group members list
+			6.2.1.3 - Group Send Invites
+		6.2.2 - item-body: User Accounts
+			6.2.2.1 - classes, pag, filters
+			6.2.2.2 - Extended Profiles
+			6.2.2.3 - Groups
+			6.2.2.4 - friends
+			6.2.2.5 - Private Messaging Threads
+			6.2.2.6 - Settings
+7.0 - Forms  -  General
+8.0 - Tables -  General
+9.0 - Error / Success Messages
+10.0 - Ajax Loading, Widgets, General classes
 ------------------------------------------------------------------------------*/
-/**
-*-------------------------------------------------------------------------------
-* @section 1.0 - Theme - Structural Elements & overrides
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 1.0 - Theme - Structural Elements & overrides
+*-------------------------------------------------------------------------------
 */
 #buddypress h1,
 #buddypress h2,
@@ -119,10 +119,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 2.0 - Navigation - General
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 2.0 - Navigation - General
+*-------------------------------------------------------------------------------
 */
 .buddypress #buddypress .item-list-tabs a,
 .buddypress #buddypress .activity-header a,
@@ -142,12 +142,12 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	border-bottom: 0;
 }
 
-/**
-*----------------------------------------------------------
-* @section 2.1 - Navs Object Nav / Sub Nav (item-list-tabs)
-*
-* The main navigational elements for all BP screens
-*----------------------------------------------------------
+/**
+*----------------------------------------------------------
+* @section 2.1 - Navs Object Nav / Sub Nav (item-list-tabs)
+*
+* The main navigational elements for all BP screens
+*----------------------------------------------------------
 */
 #buddypress {
 	/*__ Horizontal menus __*/
@@ -278,10 +278,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*----------------------------------------------------------
-* @section 2.2 - Pagination
-*----------------------------------------------------------
+/**
+*----------------------------------------------------------
+* @section 2.2 - Pagination
+*----------------------------------------------------------
 */
 #buddypress div.pagination {
 	box-shadow: none;
@@ -325,10 +325,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	left: auto;
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 4.0 - BP Lists / Loops Generic
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 4.0 - BP Lists / Loops Generic
+*-------------------------------------------------------------------------------
 */
 #buddypress .item-list .activity-header,
 #buddypress .item-list .activity-meta {
@@ -443,15 +443,15 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	font-style: italic;
 }
 
-/**
-*----------------------------------------------------------
-* @section 4.1 - Activity
-*----------------------------------------------------------
+/**
+*----------------------------------------------------------
+* @section 4.1 - Activity
+*----------------------------------------------------------
 */
-/**
-*-----------------------------------------------------
-* @section 4.1.1 - Activity Whats New
-*-----------------------------------------------------
+/**
+*-----------------------------------------------------
+* @section 4.1.1 - Activity Whats New
+*-----------------------------------------------------
 */
 #buddypress form#whats-new-form p.activity-greeting {
 	line-height: 1.4;
@@ -530,10 +530,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	margin: 40px 0;
 }
 
-/**
-*-----------------------------------------------------
-* @section 4.1.2 - Activity Listing
-*-----------------------------------------------------
+/**
+*-----------------------------------------------------
+* @section 4.1.2 - Activity Listing
+*-----------------------------------------------------
 */
 #buddypress #activity-stream li {
 	padding: 25px 0 15px;
@@ -634,14 +634,12 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	padding: 10px;
 }
 
-#buddypress #activity-stream .load-more:focus,
-#buddypress #activity-stream .load-more:hover {
+#buddypress #activity-stream .load-more:focus, #buddypress #activity-stream .load-more:hover {
 	background: #f4f4f4;
 	border: 1px solid rgba(159, 209, 226, 0.3);
 }
 
-#buddypress #activity-stream .load-more:focus a,
-#buddypress #activity-stream .load-more:hover a {
+#buddypress #activity-stream .load-more:focus a, #buddypress #activity-stream .load-more:hover a {
 	font-style: italic;
 }
 
@@ -675,10 +673,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	padding: 20px;
 }
 
-/**
-*-----------------------------------------------------
-* @section 4.1.3 - Activity Comments
-*-----------------------------------------------------
+/**
+*-----------------------------------------------------
+* @section 4.1.3 - Activity Comments
+*-----------------------------------------------------
 */
 #buddypress #activity-stream .activity-comments {
 	margin: 10px 0 0;
@@ -783,15 +781,14 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	text-align: center;
 }
 
-#buddypress #activity-stream .activity-comments .ac-form .ac-reply-cancel:focus,
-#buddypress #activity-stream .activity-comments .ac-form .ac-reply-cancel:hover {
+#buddypress #activity-stream .activity-comments .ac-form .ac-reply-cancel:focus, #buddypress #activity-stream .activity-comments .ac-form .ac-reply-cancel:hover {
 	background: #ededed;
 }
 
-/**
-*----------------------------------------------------------
-* @section 4.2 - Members Loop
-*----------------------------------------------------------
+/**
+*----------------------------------------------------------
+* @section 4.2 - Members Loop
+*----------------------------------------------------------
 */
 @media screen and (min-width: 59.6875em) {
 	#buddypress #members-list li .item-avatar,
@@ -803,15 +800,15 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 6.0 - Single Item screens: User Account & Single Group Screens
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 6.0 - Single Item screens: User Account & Single Group Screens
+*-------------------------------------------------------------------------------
 */
-/**
-*-----------------------------------------------------------
-* @subsection 6.1 - Item Header Global
-*-----------------------------------------------------------
+/**
+*-----------------------------------------------------------
+* @subsection 6.1 - Item Header Global
+*-----------------------------------------------------------
 */
 @media screen and (max-width: 46.25em) {
 	.bp-user main header.entry-header,
@@ -852,12 +849,12 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-----------------------------------------------------
-* @subsection 6.1.1 - item-header Groups
-*
-* Group Specific Item Header
-*-----------------------------------------------------
+/**
+*-----------------------------------------------------
+* @subsection 6.1.1 - item-header Groups
+*
+* Group Specific Item Header
+*-----------------------------------------------------
 */
 @media screen and (max-width: 46.25em) {
 	.single-item.groups #buddypress #item-header #item-meta {
@@ -939,12 +936,12 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-----------------------------------------------------
-* @subsection 6.1.2 - Item Header User Accounts
-*
-* User Accounts Specific Item Header
-*-----------------------------------------------------
+/**
+*-----------------------------------------------------
+* @subsection 6.1.2 - Item Header User Accounts
+*
+* User Accounts Specific Item Header
+*-----------------------------------------------------
 */
 .bp-user #buddypress #item-header {
 	padding: 20px 0;
@@ -979,10 +976,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-----------------------------------------------------------
-* @subsection 6.2 - Item Body: Global
-*-----------------------------------------------------------
+/**
+*-----------------------------------------------------------
+* @subsection 6.2 - Item Body: Global
+*-----------------------------------------------------------
 */
 #item-body h1,
 #item-body h2,
@@ -1002,17 +999,17 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	border-bottom: 0;
 }
 
-/**
-*----------------------------------------------------
-* @subsection 6.2.1 - Item Body Groups
-*
-* Groups specific item body rules -  screens
-*----------------------------------------------------
+/**
+*----------------------------------------------------
+* @subsection 6.2.1 - Item Body Groups
+*
+* Groups specific item body rules -  screens
+*----------------------------------------------------
 */
-/**
-*-----------------------------------------
-* @subsection 6.2.1.1 - Group Management
-*-----------------------------------------
+/**
+*-----------------------------------------
+* @subsection 6.2.1.1 - Group Management
+*-----------------------------------------
 */
 .groups #group-settings-form h4 {
 	background: #555;
@@ -1107,10 +1104,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	margin: 0;
 }
 
-/**
-*-----------------------------------------
-* @subsection 6.2.1.2 - Group members
-*-----------------------------------------
+/**
+*-----------------------------------------
+* @subsection 6.2.1.2 - Group members
+*-----------------------------------------
 */
 /* Members loop */
 @media screen and (max-width: 30em) {
@@ -1179,10 +1176,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-----------------------------------------
-* @subsection 6.2.1.3 - Group Send Invites
-*-----------------------------------------
+/**
+*-----------------------------------------
+* @subsection 6.2.1.3 - Group Send Invites
+*-----------------------------------------
 */
 .groups.group-invites #item-body .item-list .action {
 	margin-bottom: 0;
@@ -1218,21 +1215,21 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-*-----------------------------------------------------
-* @subsection 6.2.2 - Item Body User Accounts
-*
-* User Account specific item body rules
-*-----------------------------------------------------
+/**
+*-----------------------------------------------------
+* @subsection 6.2.2 - Item Body User Accounts
+*
+* User Account specific item body rules
+*-----------------------------------------------------
 */
 .bp-user .entry-title {
 	margin-bottom: 0.5em;
 }
 
-/**
-*--------------------------------------------
-* @subsection 6.2.2.1 - classes, pag, filters
-*--------------------------------------------
+/**
+*--------------------------------------------
+* @subsection 6.2.2.1 - classes, pag, filters
+*--------------------------------------------
 */
 .bp-user #buddypress table th {
 	font-size: 14px;
@@ -1329,10 +1326,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-	*-------------------------------------------
-	* @subsection 6.2.2.2 - Extended Profiles
-	*-------------------------------------------
+/**
+	*-------------------------------------------
+	* @subsection 6.2.2.2 - Extended Profiles
+	*-------------------------------------------
 	*/
 .bp-user #buddypress .profile .bp-widget h4 {
 	background: #6e6e6e;
@@ -1396,10 +1393,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	font-size: inherit;
 }
 
-/**
-	*-------------------------------------------
-	* @subsection 6.2.2.3 - Groups
-	*-------------------------------------------
+/**
+	*-------------------------------------------
+	* @subsection 6.2.2.3 - Groups
+	*-------------------------------------------
 	*/
 @media screen and (min-width: 77.5em) {
 	.bp-user #buddypress #groups-list li .item {
@@ -1408,10 +1405,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	}
 }
 
-/**
-	*-------------------------------------------
-	* @subsection 6.2.2.5 - Private Messaging
-	*-------------------------------------------
+/**
+	*-------------------------------------------
+	* @subsection 6.2.2.5 - Private Messaging
+	*-------------------------------------------
 	*/
 .bp-user #buddypress {
 	/* Auto Complete background */
@@ -1526,7 +1523,7 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 }
 
 .bp-user #buddypress #message-threads tr td.thread-info a::after {
-	content: " –  " attr(title);
+	content: " – " attr(title);
 	font-size: 12px;
 	font-size: 1.2rem;
 }
@@ -1645,10 +1642,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	text-indent: 0;
 }
 
-/**
-	*------------------------------
-	* @subsection 6.2.2.6 - Settings
-	*------------------------------
+/**
+	*------------------------------
+	* @subsection 6.2.2.6 - Settings
+	*------------------------------
 	*/
 .bp-user #buddypress #settings-form > p {
 	font-size: 20px;
@@ -1690,10 +1687,10 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 	width: 100%;
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 7.0 - Forms  - General
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 7.0 - Forms  - General
+*-------------------------------------------------------------------------------
 */
 #buddypress div.activity-comments form .ac-textarea {
 	background: #f7f7f7;
@@ -1723,32 +1720,28 @@ http://codex.buddypress.org/themes/buddypress-companion-stylesheets/
 
 #buddypress div.dir-search,
 #buddypress div.message-search,
-#buddypress
-li.groups-members-search {
+#buddypress li.groups-members-search {
 	float: none;
 	margin: 10px 0;
 }
 
 #buddypress div.dir-search form,
 #buddypress div.message-search form,
-#buddypress
-li.groups-members-search form {
+#buddypress li.groups-members-search form {
 	border: 1px solid rgba(153, 153, 153, 0.4);
 	overflow: hidden;
 }
 
 #buddypress div.dir-search form label,
 #buddypress div.message-search form label,
-#buddypress
-li.groups-members-search form label {
+#buddypress li.groups-members-search form label {
 	float: right;
 	width: 80%;
 }
 
 #buddypress div.dir-search form input[type='text'],
 #buddypress div.message-search form input[type='text'],
-#buddypress
-li.groups-members-search form input[type='text'] {
+#buddypress li.groups-members-search form input[type='text'] {
 	float: right;
 	margin: 0;
 	width: 80%;
@@ -1758,10 +1751,8 @@ li.groups-members-search form input[type='text'] {
 #buddypress div.dir-search form input[type='submit'],
 #buddypress div.message-search form input[type='text'],
 #buddypress div.message-search form input[type='submit'],
-#buddypress
-li.groups-members-search form input[type='text'],
-#buddypress
-li.groups-members-search form input[type='submit'] {
+#buddypress li.groups-members-search form input[type='text'],
+#buddypress li.groups-members-search form input[type='submit'] {
 	font-size: 14px;
 	font-size: 1.4rem;
 	border: 0;
@@ -1770,16 +1761,14 @@ li.groups-members-search form input[type='submit'] {
 
 #buddypress div.dir-search form input[type='text'],
 #buddypress div.message-search form input[type='text'],
-#buddypress
-li.groups-members-search form input[type='text'] {
+#buddypress li.groups-members-search form input[type='text'] {
 	border-left: 1px solid rgba(153, 153, 153, 0.4);
 	padding: 0.2em 0.2em 0.2em 0;
 }
 
 #buddypress div.dir-search form input[type='submit'],
 #buddypress div.message-search form input[type='submit'],
-#buddypress
-li.groups-members-search form input[type='submit'] {
+#buddypress li.groups-members-search form input[type='submit'] {
 	float: left;
 	font-weight: normal;
 	padding: 0.2em 1em;
@@ -1821,10 +1810,10 @@ li.groups-members-search form input[type='submit'] {
 	}
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 8.0 - Tables - General
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 8.0 - Tables - General
+*-------------------------------------------------------------------------------
 */
 #buddypress table {
 	font-size: 14px;
@@ -1892,10 +1881,10 @@ li.groups-members-search form input[type='submit'] {
 	text-align: center;
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 9.0 - Error / Success messages
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 9.0 - Error / Success messages
+*-------------------------------------------------------------------------------
 */
 #buddypress #item-body div#message {
 	margin-top: 20px;
@@ -1931,10 +1920,10 @@ li.groups-members-search form input[type='submit'] {
 	color: #1f0808;
 }
 
-/**
-*-------------------------------------------------------------------------------
-* @section 10.0 - Ajax Loading, Widgets, General classes
-*-------------------------------------------------------------------------------
+/**
+*-------------------------------------------------------------------------------
+* @section 10.0 - Ajax Loading, Widgets, General classes
+*-------------------------------------------------------------------------------
 */
 #buddypress {
 	/* Auto Complete background */
