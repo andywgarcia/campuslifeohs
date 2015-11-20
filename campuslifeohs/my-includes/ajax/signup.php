@@ -4,7 +4,7 @@ include '../functions.php';
 require_once('../../wp-config.php');
 
 
-if (empty($_GET)){
+if (empty($_POST)){
 	exit('no form data');
 }
 	//GET THEM IN THE STUDENT TABLE
@@ -16,7 +16,7 @@ if (empty($_GET)){
 	$timestamp = date($date_format);
 					
 	
-	$firstName = trim($_GET['firstName']);
+	$firstName = trim($_POST['firstName']);
 	//first we run it through  checkLetters() for lengh and regex 
 	$firstNameCheck = checkLetters($firstName);
 	if (!$firstNameCheck == 1){
@@ -27,7 +27,7 @@ if (empty($_GET)){
 	//and now the rest
 
 	//LASTNAME
-	$lastName = trim($_GET['lastName']);
+	$lastName = trim($_POST['lastName']);
 	$lastNameCheck = checkLetters($lastName);
 	if (!$lastNameCheck == 1){
 		exit($lastNameCheck);
@@ -35,7 +35,7 @@ if (empty($_GET)){
 	$lastName = ucfirst(filter_var($lastName, FILTER_SANITIZE_STRING));
 	
 	//NICKNAME
-	$nickName = trim($_GET['nickName']);
+	$nickName = trim($_POST['nickName']);
 	$nickNameCheck = checkLetters($nickName);
 	if (!$nickNameCheck == 1){
 		exit($nickNameCheck);
@@ -43,13 +43,13 @@ if (empty($_GET)){
 	$nickName = ucfirst(filter_var($nickName, FILTER_SANITIZE_STRING));
 	
 	//EMAIL
-	$email = trim($_GET['email']);
+	$email = trim($_POST['email']);
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   		exit ("Invalid email");
   	}
   	
   	//PHONE NUMBER
-  	$mobilePhone = trim($_GET['mobilePhone']);
+  	$mobilePhone = trim($_POST['number']);
 	$mobilePhoneCheck = checkNumber($mobilePhone);
 	if (!$mobilePhoneCheck == 1){
 		exit($mobilePhoneCheck);
@@ -58,7 +58,7 @@ if (empty($_GET)){
 
   	//TEXT OK
   	//If they want to screw with the submit page thats thier problem. It ain't going in our database
-  	$textOK = trim($_GET['textok']);
+  	$textOK = trim($_POST['text']);
   	if ($textOK == 'Yes'){
   		$text = 'Yes';
   	} else {
@@ -67,7 +67,7 @@ if (empty($_GET)){
   	
   	//GRADE
   	//Remeber don't trust the user, if you don't have to give them db asscess don't do it
-  	switch (trim($_GET['grade'])) {
+  	switch (trim($_POST['grade'])) {
     	case 'Freshman': //*Freshmeat
 	        $grade = "Freshman";
 	        break;
@@ -82,7 +82,7 @@ if (empty($_GET)){
 	        break;
 	}
 	//BIRTHDAY
-	$birthday = trim($_GET['birthday']);
+	$birthday = trim($_POST['birthday']);
 	if (!preg_match( "/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/", $birthday) )
 	{ 
     exit ('Invalid Birthday Day');
@@ -153,6 +153,6 @@ wp_update_user(
 	$message .= "We hope to see you Wednesdays during lunch and Mondays 2pm @ Cool River Pizza!\n";
 	wp_mail($email,$subject,$message);
 //
-echo "Thank you, you will recive an email with your username and passowrd.";
+echo "Thank you $firstName, you will recive an email with your username and passowrd.";
 
 ?>

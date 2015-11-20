@@ -33,9 +33,9 @@ get_header(); ?>
 					$xcrud->label('Last Name','Last');
 					$xcrud->label('Phone Number','Cell');
 					//$xcrud->change_type('Uploaded Image Path', 'remote_image', '', array('width'=>300, 'link'=>site_url() ));
+					$xcrud->unset_remove();
 
-
-					    $xcrud->change_type('Uploaded Image Path', 'image', false, array(
+				    $xcrud->change_type('Uploaded Image Path', 'image', false, array(
 				        'width' => 450,
 				        'path' => '/../../../student_pictures/',
 				        'thumbs' => array(array(
@@ -47,8 +47,6 @@ get_header(); ?>
 					$xcrud->columns('identifier, Nickname, Dropbox Image Path, Uploaded Image Path, Last Contacted', true); //hide these in list view
 					
 					echo $xcrud->render();
-
-					echo dirname(__FILE__);
 
 
 					}else {
