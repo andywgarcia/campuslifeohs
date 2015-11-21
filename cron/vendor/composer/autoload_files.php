@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    $vendorDir . '/illuminate/support/Illuminate/Support/helpers.php',
     $vendorDir . '/joshcam/mysqli-database-class/MysqliDb.php',
     $vendorDir . '/joshcam/mysqli-database-class/dbObject.php',
 );

@@ -1,10 +1,9 @@
-
-
 {
     "require": {
         "katzgrau/klogger": "dev-master",
         "phpmailer/phpmailer": "~5.2",
-        "joshcam/mysqli-database-class": "dev-master"
+        "joshcam/mysqli-database-class": "dev-master",
+        "nmcteam/image-with-text": "~2.0"
     }
 
 }
