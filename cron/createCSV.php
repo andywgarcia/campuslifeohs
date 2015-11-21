@@ -151,6 +151,7 @@ $log->debug('Closed file buffer');
 														Create QR Codes
 ********************************************************************************************************************************
 *******************************************************************************************************************************/
+/*
 $log->info('Creating QR Codes');
 
 //Mysql Hack to create a full join
@@ -182,6 +183,8 @@ foreach ($rawQRResult as $key ) {
 		}
 	}
 }
+*/
+$image = new \NMC\ImageWithText\Image('test.jpg');
 
 
 /*******************************************************************************************************************************
@@ -190,6 +193,46 @@ foreach ($rawQRResult as $key ) {
 ********************************************************************************************************************************
 *******************************************************************************************************************************/						
 
+$log->info('Starting Dropbox Upload');
+
+$accessToken = "mcWxFEgcVbIAAAAAAAACgctpLBLkmojYc8kXY4IJDgQvtBdKiPXaUBT5bRDoj9Mu";
+$appInfo = dbx\AppInfo::loadFromJsonFile($includes . "dropbox-sdk/Dropbox/app-info.json");
+$webAuth = new dbx\WebAuthNoRedirect($appInfo, "PHP-Example/1.0");
+$dbxClient = new dbx\Client($accessToken, "PHP-Example/1.0");
+$accountInfo = $dbxClient->getAccountInfo();
+
+$log->info('Starting CSV File Upload');
+
+$dropbox_student_list = "/Apps/Attendance2/student_list.csv";
+
+$log->info('Starting Dropbox Upload');
+
+$CVSFileHandle = fopen($CVSFilePath,"rb");
+
+if (!$CVSFileHandle){
+		$log->error('Could not Open CSV file');
+		failed();
+    	exit();
+}
+
+$DropboxFileUploadResult = $dbxClient->uploadFile("/Apps/Attendance2/student_list.csv",dbx\WriteMode::force(),$CVSFileHandle);
+
+if(!$DropboxFileUploadResult){
+		$log->error('Could not Upload CSV file to Dropbox');
+		failed();
+    	exit();
+}
+
+$log->info('CSV File Uploaded to dropbox');
+fclose($CVSFileHandle);
+	
+$log->info('Starting Drobox Picture upload');						
+	$f = fopen($uploadedImage,"rb");
+	if ($f){
+		$result = $dbxClient->uploadFile("/Apps/Attendance2/$dropboxImageName",dbx\WriteMode::force(),$f);
+		fclose($f);
+	}
+	
 		
 /*******************************************************************************************************************************
 ********************************************************************************************************************************

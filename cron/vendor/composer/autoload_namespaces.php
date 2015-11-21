@@ -7,4 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
+    'NMC' => array($vendorDir . '/nmcteam/image-with-text/src'),
+    'Intervention\\Image' => array($vendorDir . '/intervention/image/src'),
+    'Illuminate\\Support' => array($vendorDir . '/illuminate/support'),
 );
